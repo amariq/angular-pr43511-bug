@@ -1,0 +1,8 @@
+/*
+ * Public API Surface of lib2
+ */
+
+export * from './lib/lib2.service';
+export * from './lib/lib2.interface';
+export * from './lib/lib2.component';
+export * from './lib/lib2.module';
