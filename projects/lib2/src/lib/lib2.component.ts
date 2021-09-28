@@ -1,5 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ValueOf, ValueOrArray } from './lib2.interface';
+
+export type FieldOf<T> = keyof T & string;
+
+export type ValueOf<T, K extends FieldOf<T> = FieldOf<T>> = T | T[K];
 
 @Component({
   selector: 'lib-lib2',
@@ -9,9 +12,8 @@ import { ValueOf, ValueOrArray } from './lib2.interface';
       {{ value }}
     </p>
   `,
-  styles: [],
 })
-export class Lib2Component<T = any, V extends ValueOrArray<ValueOf<T>> = any>
+export class Lib2Component<T = any, V extends ValueOf<T> = any>
   implements OnInit
 {
   @Input()

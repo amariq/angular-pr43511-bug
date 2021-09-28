@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build --configuration=production",
     "watch": "ng build --watch --configuration=development",
-    "test": "ng test"
+    "test": "ng test",
+    "demo": "npm run build lib2 && npm run build"
   },
   "private": true,
   "dependencies": {
